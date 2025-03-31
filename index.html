@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="https://BrandonFCast.github.io/DonasDonPancho/assets/donaletra-DSs3wkHU.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F7CFD8">
+  <title>Donas Don Pacho</title>
+  <script type="module" crossorigin src="https://BrandonFCast.github.io/DonasDonPancho/assets/index-Bt3GsM_H.js"></script>
+  <link rel="stylesheet" crossorigin href="https://BrandonFCast.github.io/DonasDonPancho/assets/index-U04Gh-5D.css">
+</head>
+
+<body>
+  <div id="bg-decorations">
+    <div class="decoration" style="animation-delay: .3s;"></div>
+    <div class="decoration" style="animation-delay: 2.5s;"></div>
+    <div class="decoration" style="animation-delay: 1.2s;"></div>
+    <div class="decoration" style="animation-delay: 4.3s;"></div>
+    <div class="decoration" style="animation-delay: 8.7s;"></div>
+    <div class="decoration" style="animation-delay: 4s;"></div>
+    <div class="decoration" style="animation-delay: 6.4s;"></div>
+    <div class="decoration" style="animation-delay: 2s;"></div>
+    <div class="decoration" style="animation-delay: 0s;"></div>
+    <div class="decoration" style="animation-delay: 5.7s;"></div>
+    <div class="decoration" style="animation-delay: 6.2s;"></div>
+    <div class="decoration" style="animation-delay: 9s;"></div>
+    <div class="decoration" style="animation-delay: 7.2s;"></div>
+    <div class="decoration" style="animation-delay: 4.8s;"></div>
+    <div class="decoration" style="animation-delay: 1.5s;"></div>
+  </div>
+  <div id="app">
+    <header>
+      <h2 class="button">Donas Don Pancho</h2>
+      <ul>
+        <li>Inicio</li>
+        <li>Acerca de nosotros</li>
+        <li>Productos</li>
+        <li>Contacto</li>
+      </ul>
+    </header>
+
+    <main>
+      <section>
+        <h1>Donas Don Panch<span><img id="donut-letter" src="https://BrandonFCast.github.io/DonasDonPancho/assets/donaletra-DSs3wkHU.png" alt=""></span></h1>
+        <h3>Sabor a viejon</h3>
+        <p>
+          En Donas Don Pancho, nos especializamos en crear donas artesanales con ingredientes frescos y mucho amor. Desde los clásicos glaseados hasta combinaciones innovadoras, cada dona es una experiencia única.
+        </p>
+        <button style="font-size: 20px; letter-spacing: 3px; font-weight: bold;" class="button">Comprar</button>
+      </section>
+      <div>
+        <!-- <img src="public/imgs/logo2.png" alt="logo"> -->
+        <img src="https://BrandonFCast.github.io/DonasDonPancho/assets/logo3-hRulMIdU.png" alt="logo">
+      </div>
+    </main>
+
+    <section id="products">
+      <h2>Nuestros productos</h2>
+      <div id="products-panel">
+          <button class="button" id="btnR">👉</button>
+          <button class="button" id="btnL">👈</button>
+          <div class="product-card">
+            <h3>Fresona</h3>
+            <img style="--c1: #F7CFD8; --c2: #a56477;" src="https://BrandonFCast.github.io/DonasDonPancho/assets/d1-Ce34XqjO.png" alt="dona numero 1">
+            <button onclick="addDonutToCar('fresonaCount')" class="button">Agregar al carrito</button>
+          </div>
+          <div class="product-card">
+            <h3>Mexicana</h3>
+            <img style="--c1: #ecc8a9; --c2: #a57364;" src="https://BrandonFCast.github.io/DonasDonPancho/assets/d2-C6FrWgbN.webp" alt="dona numero 2">
+            <button onclick="addDonutToCar('mexicanaCount')" class="button">Agregar al carrito</button>
+          </div>
+          <div class="product-card">
+            <h3>DonSnow</h3>
+            <img style="--c1: #ececec; --c2: #c7c7c7;" src="https://BrandonFCast.github.io/DonasDonPancho/assets/d3-C5phGP_1.webp" alt="dona numero 3">
+            <button onclick="addDonutToCar('snowCount')" class="button">Agregar al carrito</button>
+          </div>
+          <div class="product-card">
+            <h3>DonaMora</h3>
+            <img style="--c1: #cfd2f7; --c2: #646aa5;" src="https://BrandonFCast.github.io/DonasDonPancho/assets/azul-D289sWyL.webp" alt="dona ">
+            <button onclick="addDonutToCar('moraCount')" class="button">Agregar al carrito</button>
+          </div>
+          <div class="product-card">
+            <h3>Campechana</h3>
+            <img style="--c1: #ececec; --c2: #c7c7c7;" src="https://BrandonFCast.github.io/DonasDonPancho/assets/d6-CMUBC6-M.png" alt="dona numero 3">
+            <button onclick="addDonutToCar('campechanaCount')" class="button">Agregar al carrito</button>
+          </div>
+      </div>
+    </section>
+
+    <section id="pay-section">
+      <div id="car-view">
+        <h2>Carrito</h2>
+        <div id="car-prods">
+          <ul>
+            <li>Fresona: <span id="fresonaCount">0</span></li>
+            <li>Mexicana: <span id="mexicanaCount">0</span></li>
+            <li>DonSnow: <span id="snowCount">0</span></li>
+            <li>DonaMora: <span id="moraCount">0</span></li>
+            <li>Campechana: <span id="campechanaCount">0</span></li>
+          </ul>
+        </div>
+        <p><br><br><br>Total: <span id="total"></span></p>
+      </div>
+
+      <div id="pay-form">
+        <h2>Formulario de pago</h2>
+        <input type="text" class="input-text" placeholder="nombre del titular">
+        <input pattern="\d{16}" type="text" class="input-text" placeholder="número de tarjeta" required>
+        <div>
+          <input pattern="\d{2}" type="text" style="width: 100px; margin: 0 5px;" class="input-text" placeholder="mm" required><span>/</span>
+          <input pattern="\d{2}" type="text" style="width: 100px; margin: 0 5px;" class="input-text" placeholder="aa" required>
+        </div>
+        <input pattern="\d{3}" type="text" class="input-text"  style="width: 100px;" placeholder="cvv" required>
+        <button id="buy-button" style="font-weight: bold; padding: 10px 15px; filter: hue-rotate(268deg);" class="button">Comprar</button>
+      </div>
+    </section>
+    <footer>
+
+    </footer>
+  </div>
+  
+</body>
+
+</html>
