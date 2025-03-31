@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/public/imgs/donaletra.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F7CFD8">
+  <title>Donas Don Pacho</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <div id="bg-decorations">
+    <div class="decoration" style="animation-delay: .3s;"></div>
+    <div class="decoration" style="animation-delay: 2.5s;"></div>
+    <div class="decoration" style="animation-delay: 1.2s;"></div>
+    <div class="decoration" style="animation-delay: 4.3s;"></div>
+    <div class="decoration" style="animation-delay: 8.7s;"></div>
+    <div class="decoration" style="animation-delay: 4s;"></div>
+    <div class="decoration" style="animation-delay: 6.4s;"></div>
+    <div class="decoration" style="animation-delay: 2s;"></div>
+    <div class="decoration" style="animation-delay: 0s;"></div>
+    <div class="decoration" style="animation-delay: 5.7s;"></div>
+    <div class="decoration" style="animation-delay: 6.2s;"></div>
+    <div class="decoration" style="animation-delay: 9s;"></div>
+    <div class="decoration" style="animation-delay: 7.2s;"></div>
+    <div class="decoration" style="animation-delay: 4.8s;"></div>
+    <div class="decoration" style="animation-delay: 1.5s;"></div>
+  </div>
+  <div id="app">
+    <header>
+      <h2 class="button">Donas Don Pancho</h2>
+      <ul>
+        <li>Inicio</li>
+        <li>Acerca de nosotros</li>
+        <li>Productos</li>
+        <li>Contacto</li>
+      </ul>
+    </header>
+
+    <main>
+      <section>
+        <h1>Donas Don Panch<span><img id="donut-letter" src="./public/imgs/donaletra.png" alt=""></span></h1>
+        <h3>Sabor a viejon</h3>
+        <p>
+          En Donas Don Pancho, nos especializamos en crear donas artesanales con ingredientes frescos y mucho amor. Desde los clásicos glaseados hasta combinaciones innovadoras, cada dona es una experiencia única.
+        </p>
+        <button class="button">Comprar</button>
+      </section>
+      <div>
+        <!-- <img src="public/imgs/logo2.png" alt="logo"> -->
+        <img src="public/imgs/logo3.png" alt="logo">
+      </div>
+    </main>
+
+    <section id="products">
+      <h2>Nuestros productos</h2>
+      <div id="products-panel">
+          <button class="button" id="btnR">👉</button>
+          <button class="button" id="btnL">👈</button>
+          <div class="product-card">
+            <h3>Fresona</h3>
+            <img style="--c1: #F7CFD8; --c2: #a56477;" src="./public/imgs/d1.png" alt="dona numero 1">
+            <button class="button">Agregar al carrito</button>
+          </div>
+          <div class="product-card">
+            <h3>Mexicana</h3>
+            <img style="--c1: #ecc8a9; --c2: #a57364;" src="./public/imgs/d2.webp" alt="dona numero 2">
+            <button class="button">Agregar al carrito</button>
+          </div>
+          <div class="product-card">
+            <h3>DonSnow</h3>
+            <img style="--c1: #ececec; --c2: #c7c7c7;" src="./public/imgs/d3.webp" alt="dona numero 3">
+            <button class="button">Agregar al carrito</button>
+          </div>
+          <div class="product-card">
+            <h3>DonaMora</h3>
+            <img style="--c1: #cfd2f7; --c2: #646aa5;" src="./public/imgs/azul.webp" alt="dona ">
+            <button class="button">Agregar al carrito</button>
+          </div>
+          <div class="product-card">
+            <h3>Campechana</h3>
+            <img style="--c1: #ececec; --c2: #c7c7c7;" src="./public/imgs/d6.png" alt="dona numero 3">
+            <button class="button">Agregar al carrito</button>
+          </div>
+      </div>
+    </section>
+
+    <section id="pay-section">
+      <div id="car-view">
+        <h2>Carrito</h2>
+        <div id="car-prods">
+          <ul>
+            <li>Fresona: <span id="fresonaCount"></span></li>
+            <li>Mexicana: <span id="mexicanaCount"></span></li>
+            <li>DonSnow: <span id="snowCount"></span></li>
+            <li>DonaMora: <span id="moraCount"></span></li>
+            <li>Campechana: <span id="campechanaCount"></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="pay-form">
+        <h2>Formulario de pago</h2>
+        <input type="text" placeholder="nombre del titular">
+        <input type="text" placeholder="número de tarjeta">
+        <div>
+          <input type="text" placeholder="mm"><span>/</span>
+          <input type="text" placeholder="aa">
+        </div>
+        <input type="text" placeholder="cvv">
+      </div>
+    </section>
+  </div>
+  
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
