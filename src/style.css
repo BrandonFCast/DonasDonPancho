@@ -50,7 +50,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     transform: translateY(-100%);
-    animation: donut 7s linear infinite, oscillation 2s ease infinite;
+    animation: donut 9s linear infinite, oscillation 4s ease infinite;
 }
 
 @keyframes donut {
@@ -236,6 +236,7 @@ h1 {
 }
 #pay-section {
     display: flex;
+    justify-content: space-evenly;
     color: var(--dark-text-color);
 }
 
@@ -270,4 +271,41 @@ h1 {
             left: -25px;
         }
     }
+}
+
+#pay-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.input-text {
+    padding: 10px 15px;
+    background-color: var(--main-color-dark);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: var(--bg-color);
+    box-shadow: -2px 2px 0 2px var(--shadow-color);
+    transition: .3s;
+    &::placeholder {
+        color: var(--bg-color);
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    &:focus {
+        transform: translateX(2px) translateY(-2px);
+        box-shadow: -4px 4px 0 2px var(--shadow-color);
+    }
+    &:invalid {
+        filter: hue-rotate(170deg);
+        /* background-color: red; */
+    }
+}
+
+footer {
+    background-color: var(--main-color-dark);
+    height: 100px;
 }

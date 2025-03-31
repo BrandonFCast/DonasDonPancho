@@ -46,7 +46,7 @@
         <p>
           En Donas Don Pancho, nos especializamos en crear donas artesanales con ingredientes frescos y mucho amor. Desde los clásicos glaseados hasta combinaciones innovadoras, cada dona es una experiencia única.
         </p>
-        <button class="button">Comprar</button>
+        <button style="font-size: 20px; letter-spacing: 3px; font-weight: bold;" class="button">Comprar</button>
       </section>
       <div>
         <!-- <img src="public/imgs/logo2.png" alt="logo"> -->
@@ -62,27 +62,27 @@
           <div class="product-card">
             <h3>Fresona</h3>
             <img style="--c1: #F7CFD8; --c2: #a56477;" src="./public/imgs/d1.png" alt="dona numero 1">
-            <button class="button">Agregar al carrito</button>
+            <button onclick="addDonutToCar('fresonaCount')" class="button">Agregar al carrito</button>
           </div>
           <div class="product-card">
             <h3>Mexicana</h3>
             <img style="--c1: #ecc8a9; --c2: #a57364;" src="./public/imgs/d2.webp" alt="dona numero 2">
-            <button class="button">Agregar al carrito</button>
+            <button onclick="addDonutToCar('mexicanaCount')" class="button">Agregar al carrito</button>
           </div>
           <div class="product-card">
             <h3>DonSnow</h3>
             <img style="--c1: #ececec; --c2: #c7c7c7;" src="./public/imgs/d3.webp" alt="dona numero 3">
-            <button class="button">Agregar al carrito</button>
+            <button onclick="addDonutToCar('snowCount')" class="button">Agregar al carrito</button>
           </div>
           <div class="product-card">
             <h3>DonaMora</h3>
             <img style="--c1: #cfd2f7; --c2: #646aa5;" src="./public/imgs/azul.webp" alt="dona ">
-            <button class="button">Agregar al carrito</button>
+            <button onclick="addDonutToCar('moraCount')" class="button">Agregar al carrito</button>
           </div>
           <div class="product-card">
             <h3>Campechana</h3>
             <img style="--c1: #ececec; --c2: #c7c7c7;" src="./public/imgs/d6.png" alt="dona numero 3">
-            <button class="button">Agregar al carrito</button>
+            <button onclick="addDonutToCar('campechanaCount')" class="button">Agregar al carrito</button>
           </div>
       </div>
     </section>
@@ -92,26 +92,31 @@
         <h2>Carrito</h2>
         <div id="car-prods">
           <ul>
-            <li>Fresona: <span id="fresonaCount"></span></li>
-            <li>Mexicana: <span id="mexicanaCount"></span></li>
-            <li>DonSnow: <span id="snowCount"></span></li>
-            <li>DonaMora: <span id="moraCount"></span></li>
-            <li>Campechana: <span id="campechanaCount"></span></li>
+            <li>Fresona: <span id="fresonaCount">0</span></li>
+            <li>Mexicana: <span id="mexicanaCount">0</span></li>
+            <li>DonSnow: <span id="snowCount">0</span></li>
+            <li>DonaMora: <span id="moraCount">0</span></li>
+            <li>Campechana: <span id="campechanaCount">0</span></li>
           </ul>
         </div>
+        <p><br><br><br>Total: <span id="total"></span></p>
       </div>
 
       <div id="pay-form">
         <h2>Formulario de pago</h2>
-        <input type="text" placeholder="nombre del titular">
-        <input type="text" placeholder="número de tarjeta">
+        <input type="text" class="input-text" placeholder="nombre del titular">
+        <input pattern="\d{16}" type="text" class="input-text" placeholder="número de tarjeta" required>
         <div>
-          <input type="text" placeholder="mm"><span>/</span>
-          <input type="text" placeholder="aa">
+          <input pattern="\d{2}" type="text" style="width: 100px; margin: 0 5px;" class="input-text" placeholder="mm" required><span>/</span>
+          <input pattern="\d{2}" type="text" style="width: 100px; margin: 0 5px;" class="input-text" placeholder="aa" required>
         </div>
-        <input type="text" placeholder="cvv">
+        <input pattern="\d{3}" type="text" class="input-text"  style="width: 100px;" placeholder="cvv" required>
+        <button id="buy-button" style="font-weight: bold; padding: 10px 15px; filter: hue-rotate(268deg);" class="button">Comprar</button>
       </div>
     </section>
+    <footer>
+
+    </footer>
   </div>
   
   <script type="module" src="/src/main.js"></script>
