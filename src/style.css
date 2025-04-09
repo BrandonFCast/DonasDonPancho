@@ -248,7 +248,7 @@ h1 {
     width: 50%;
 }
 
-#car-prods {
+#car-prods, #contact {
     ul {
         list-style: none;
         display: flex;
@@ -307,5 +307,20 @@ h1 {
 
 footer {
     background-color: var(--main-color-dark);
-    height: 100px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: var(--dark-text-color);
+    }
+    li {
+        transition: .3s;
+    }
+    li:hover {
+        transform: scale(1.1);
+    }
 }
