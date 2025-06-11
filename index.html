@@ -28,23 +28,31 @@
     <div class="decoration" style="animation-delay: 4.8s;"></div>
     <div class="decoration" style="animation-delay: 1.5s;"></div>
   </div>
+  <dialog id="dial1">
+    <h2>Oferta del día</h2>
+    <img src="public/imgs/d3.webp" alt="oferta">
+    <p>Hoy tenemos esta dona a mitad de precio, ¡apurate a comprarla!</p>
+    <button class="button" onclick="document.getElementById('dial1').style.display = 'none'">Aceptar</button>
+  </dialog>
   <div id="app">
+
     <header>
       <h2 class="button">Donas Don Pancho</h2>
       <ul>
         <li>Inicio</li>
-        <!-- <li>Acerca de nosotros</li> -->
         <li><a href="#products">Productos</a></li>
         <li><a href="#contact">Contacto</a></li>
+        <li><a href="#about-us">Nosotros</a></li>
       </ul>
     </header>
 
     <main>
       <section>
         <h1>Donas Don Panch<span><img id="donut-letter" src="./public/imgs/donaletra.png" alt=""></span></h1>
-        <h3>Sabor a viejon</h3>
+        <h3>"Porque el hoyo sabe rico"</h3>
         <p>
-          En Donas Don Pancho, nos especializamos en crear donas artesanales con ingredientes frescos y mucho amor. Desde los clásicos glaseados hasta combinaciones innovadoras, cada dona es una experiencia única.
+          En Donas Don Pancho, nos especializamos en crear donas artesanales con ingredientes frescos y mucho amor.
+          Desde los clásicos glaseados hasta combinaciones innovadoras, cada dona es una experiencia única.
         </p>
         <button style="font-size: 20px; letter-spacing: 3px; font-weight: bold;" class="button">Comprar</button>
       </section>
@@ -57,33 +65,33 @@
     <section id="products">
       <h2>Nuestros productos</h2>
       <div id="products-panel">
-          <button class="button" id="btnR">👉</button>
-          <button class="button" id="btnL">👈</button>
-          <div class="product-card">
-            <h3>Fresona</h3>
-            <img style="--c1: #F7CFD8; --c2: #a56477;" src="./public/imgs/d1.png" alt="dona numero 1">
-            <button onclick="addDonutToCar('fresonaCount')" class="button">Agregar al carrito</button>
-          </div>
-          <div class="product-card">
-            <h3>Mexicana</h3>
-            <img style="--c1: #ecc8a9; --c2: #a57364;" src="./public/imgs/d2.webp" alt="dona numero 2">
-            <button onclick="addDonutToCar('mexicanaCount')" class="button">Agregar al carrito</button>
-          </div>
-          <div class="product-card">
-            <h3>DonSnow</h3>
-            <img style="--c1: #ececec; --c2: #c7c7c7;" src="./public/imgs/d3.webp" alt="dona numero 3">
-            <button onclick="addDonutToCar('snowCount')" class="button">Agregar al carrito</button>
-          </div>
-          <div class="product-card">
-            <h3>DonaMora</h3>
-            <img style="--c1: #cfd2f7; --c2: #646aa5;" src="./public/imgs/azul.webp" alt="dona ">
-            <button onclick="addDonutToCar('moraCount')" class="button">Agregar al carrito</button>
-          </div>
-          <div class="product-card">
-            <h3>Campechana</h3>
-            <img style="--c1: #ececec; --c2: #c7c7c7;" src="./public/imgs/d6.png" alt="dona numero 3">
-            <button onclick="addDonutToCar('campechanaCount')" class="button">Agregar al carrito</button>
-          </div>
+        <button class="button" id="btnR">👉</button>
+        <button class="button" id="btnL">👈</button>
+        <div class="product-card">
+          <h3>Fresona</h3>
+          <img style="--c1: #F7CFD8; --c2: #a56477;" src="./public/imgs/d1.png" alt="dona numero 1">
+          <button onclick="addDonutToCar('fresonaCount')" class="button">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <h3>Mexicana</h3>
+          <img style="--c1: #ecc8a9; --c2: #a57364;" src="./public/imgs/d2.webp" alt="dona numero 2">
+          <button onclick="addDonutToCar('mexicanaCount')" class="button">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <h3>DonSnow</h3>
+          <img style="--c1: #ececec; --c2: #c7c7c7;" src="./public/imgs/d3.webp" alt="dona numero 3">
+          <button onclick="addDonutToCar('snowCount')" class="button">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <h3>DonaMora</h3>
+          <img style="--c1: #cfd2f7; --c2: #646aa5;" src="./public/imgs/azul.webp" alt="dona ">
+          <button onclick="addDonutToCar('moraCount')" class="button">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <h3>Campechana</h3>
+          <img style="--c1: #ececec; --c2: #c7c7c7;" src="./public/imgs/d6.png" alt="dona numero 3">
+          <button onclick="addDonutToCar('campechanaCount')" class="button">Agregar al carrito</button>
+        </div>
       </div>
     </section>
 
@@ -105,14 +113,67 @@
       <div id="pay-form">
         <h2>Formulario de pago</h2>
         <input type="text" class="input-text" placeholder="nombre del titular">
+        <input type="email" class="input-text" placeholder="correo electronico">
         <input pattern="\d{16}" type="text" class="input-text" placeholder="número de tarjeta" required>
         <div>
-          <input pattern="\d{2}" type="text" style="width: 100px; margin: 0 5px;" class="input-text" placeholder="mm" required><span>/</span>
-          <input pattern="\d{2}" type="text" style="width: 100px; margin: 0 5px;" class="input-text" placeholder="aa" required>
+          <input pattern="\d{2}" type="text" style="width: 100px; margin: 0 5px;" class="input-text" placeholder="mm"
+            required><span>/</span>
+          <input pattern="\d{2}" type="text" style="width: 100px; margin: 0 5px;" class="input-text" placeholder="aa"
+            required>
         </div>
-        <input pattern="\d{3}" type="text" class="input-text"  style="width: 100px;" placeholder="cvv" required>
-        <button id="buy-button" style="font-weight: bold; padding: 10px 15px; filter: hue-rotate(268deg);" class="button">Comprar</button>
+        <input pattern="\d{3}" type="text" class="input-text" style="width: 100px;" placeholder="cvv" required>
+        <button id="buy-button" style="font-weight: bold; padding: 10px 15px; filter: hue-rotate(268deg);"
+          class="button">Comprar</button>
       </div>
+    </section>
+
+    <section id="about-us">
+      <h2>Sobre nosotros</h2>
+      <div>
+        <p>
+          Somos una compañia especializada en mostrar las cosas buenas de la vida
+          y atraves de nuestras donas es como lo hemos logrado, para Donas Don Pancho
+          la calidad de nuestras donas es prioridad, lo que nos impulsa a crear nuevos
+          sabores cada día, acutualmente contamos con 7 deliciosos sabores y otros 3 en
+          producción: piña coco, lengua de gotica y ¡aguacate!
+        </p>
+        <img src="public/imgs/logo.png" alt="">
+      </div>
+    </section>
+
+    <section id="reviews">
+      <h2>Nuestras reseñas</h2>
+      <ul>
+        <li>
+          <h4>Luis</h4>
+          <p>⭐⭐⭐⭐☆ es cierto, ¡El hoyo sabe rico!</p>
+        </li>
+        <li>
+          <h4>Dani</h4>
+          <p>⭐⭐⭐⭐⭐ riquisima la de lengua de gotica</p>
+        </li>
+        <li>
+          <h4>Fernanda</h4>
+          <p>⭐☆☆☆☆ mi novio me pego porque no le gustó la dona 😭</p>
+        </li>
+      </ul>
+    </section>
+    <section id="faqs">
+      <h2>Preguntas frecuentes</h2>
+      <ul>
+        <li>
+          <h4>¿Cuantos sabores tienen?</h4>
+          <p>Actualmente contamos con 7 sabores y 3 en desarrollo </p>
+        </li>
+        <li>
+          <h4>¿El hoyo si sabe?</h4>
+          <p>Si y sabe riquisimo</p>
+        </li>
+        <li>
+          <h4>¿Puedo probar las donas en desarrollo?</h4>
+          <p>Si pero debes estar en nuestro programa VIP</p>
+        </li>
+      </ul>
     </section>
 
     <footer id="contact">
@@ -124,7 +185,7 @@
       </ul>
     </footer>
   </div>
-  
+
   <script type="module" src="/src/main.js"></script>
 </body>
 
